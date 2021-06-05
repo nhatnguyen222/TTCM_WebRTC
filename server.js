@@ -57,54 +57,12 @@ function serverHandler(request, response) {
             }
         }
 
-        if(filename.indexOf(resolveURL('/admin/')) !== -1 && config.enableAdmin !== true) {
-            try {
-                response.writeHead(401, {
-                    'Content-Type': 'text/plain'
-                });
-                response.write('401 Unauthorized: ' + path.join('/', uri) + '\n');
-                response.end();
-                return;
-            } catch (e) {
-                pushLogs(config, '!GET or ..', e);
-            }
-            return;
-        }
+       
 
         var matched = false;
-        ['/home/', '/dev/', '/dist/', '/socket.io/', '/node_modules/canvas-designer/', '/admin/'].forEach(function(item) {
+        ['/home/'].forEach(function(item) {
             if (filename.indexOf(resolveURL(item)) !== -1) {
                 matched = true;
-            }
-        });
-
-        // files from node_modules
-        ['RecordRTC.js', 'FileBufferReader.js', 'getStats.js', 'getScreenId.js', 'adapter.js', 'MultiStreamsMixer.js'].forEach(function(item) {
-            if (filename.indexOf(resolveURL('/node_modules/')) !== -1 && filename.indexOf(resolveURL(item)) !== -1) {
-                matched = true;
-            }
-        });
-
-        if (filename.search(/.js|.json/g) !== -1 && !matched) {
-            try {
-                response.writeHead(404, {
-                    'Content-Type': 'text/plain'
-                });
-                response.write('404 Not Found: ' + path.join('/', uri) + '\n');
-                response.end();
-                return;
-            } catch (e) {
-                pushLogs(config, '404 Not Found', e);
-            }
-        }
-
-        ['Video-Broadcasting', 'Screen-Sharing', 'Switch-Cameras'].forEach(function(fname) {
-            try {
-                if (filename.indexOf(fname + '.html') !== -1) {
-                    filename = filename.replace(fname + '.html', fname.toLowerCase() + '.html');
-                }
-            } catch (e) {
-                pushLogs(config, 'forEach', e);
             }
         });
 
@@ -133,35 +91,7 @@ function serverHandler(request, response) {
             return;
         }
 
-        try {
-            if (fs.statSync(filename).isDirectory()) {
-                response.writeHead(404, {
-                    'Content-Type': 'text/html'
-                });
-
-                if (filename.indexOf(resolveURL('/home/MultiRTC/')) !== -1) {
-                    filename = filename.replace(resolveURL('/home/MultiRTC/'), '');
-                    filename += resolveURL('/home/MultiRTC/index.html');
-                } else if (filename.indexOf(resolveURL('/admin/')) !== -1) {
-                    filename = filename.replace(resolveURL('/admin/'), '');
-                    filename += resolveURL('/admin/index.html');
-                } else if (filename.indexOf(resolveURL('/home/dashboard/')) !== -1) {
-                    filename = filename.replace(resolveURL('/home/dashboard/'), '');
-                    filename += resolveURL('/home/dashboard/index.html');
-                } else if (filename.indexOf(resolveURL('/home/video-conference/')) !== -1) {
-                    filename = filename.replace(resolveURL('/home/video-conference/'), '');
-                    filename += resolveURL('/home/video-conference/index.html');
-                } else if (filename.indexOf(resolveURL('/home')) !== -1) {
-                    filename = filename.replace(resolveURL('/home/'), '');
-                    filename = filename.replace(resolveURL('/home'), '');
-                    filename += resolveURL('/home/index.html');
-                } else {
-                    filename += resolveURL(config.homePage);
-                }
-            }
-        } catch (e) {
-            pushLogs(config, 'statSync.isDirectory', e);
-        }
+     
 
         var contentType = 'text/plain';
         if (filename.toLowerCase().indexOf('.html') !== -1) {
