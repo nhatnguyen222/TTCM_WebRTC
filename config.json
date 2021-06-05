@@ -1,0 +1,16 @@
+{
+  "socketURL": "/",
+  "dirPath": "",
+  "homePage": "/home/index.html",
+  "socketMessageEvent": "WebRTCUTC2-Message",
+  "socketCustomEvent": "WebRTCUTC2-Custom-Message",
+  "port": "433",
+  "enableLogs": "false",
+  "autoRebootServerOnFailure": "false",
+  "isUseHTTPs": "false",
+  "sslKey": "./fake-keys/privatekey.pem",
+  "sslCert": "./fake-keys/certificate.pem",
+  "sslCabundle": "",
+  
+
+}

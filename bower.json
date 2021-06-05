@@ -1,0 +1,29 @@
+{
+    "name": "webRTCUTC2",
+    "description": "",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Nhat Nguyen Hoang",
+            "email": "nhatnguyennhn@gmail.com",
+            "homepage": "https://www.facebook.com/M2K.HustlerHT"
+        }
+    ],
+    "main": "WebRTCUTC2.min.js",
+    "keywords": [
+        "nhatnguyen",
+        "webrtc utc2"
+        
+    ],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "test",
+        "tests"
+    ]
+}
