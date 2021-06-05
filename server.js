@@ -3,17 +3,17 @@ const path = require('path');
 const url = require('url');
 var httpServer = require('http');
 const ioServer = require('socket.io');
-const RTCMultiConnectionServer = require('rtcmulticonnection-server');
+const ConnectionServer = require('connection-server');
 var PORT = 433;
 var isUseHTTPs = false;
 const jsonPath = {
     config: 'config.json',
     logs: 'logs.json'
 };
-const BASH_COLORS_HELPER = RTCMultiConnectionServer.BASH_COLORS_HELPER;
-const getValuesFromConfigJson = RTCMultiConnectionServer.getValuesFromConfigJson;
-const getBashParameters = RTCMultiConnectionServer.getBashParameters;
-const resolveURL = RTCMultiConnectionServer.resolveURL;
+const BASH_COLORS_HELPER = ConnectionServer.BASH_COLORS_HELPER;
+const getValuesFromConfigJson =ConnectionServer.getValuesFromConfigJson;
+const getBashParameters = ConnectionServer.getBashParameters;
+const resolveURL = ConnectionServer.resolveURL;
 
 var config = getValuesFromConfigJson(jsonPath);
 config = getBashParameters(config, BASH_COLORS_HELPER);
@@ -179,14 +179,14 @@ if (isUseHTTPs) {
     httpApp = httpServer.createServer(serverHandler);
 }
 
-RTCMultiConnectionServer.beforeHttpListen(httpApp, config);
+ConnectionServer.beforeHttpListen(httpApp, config);
 httpApp = httpApp.listen(process.env.PORT || PORT, process.env.IP || "0.0.0.0", function() {
-    RTCMultiConnectionServer.afterHttpListen(httpApp, config);
+    ConnectionServer.afterHttpListen(httpApp, config);
 });
 
 
 ioServer(httpApp).on('connection', function(socket) {
-    RTCMultiConnectionServer.addSocket(socket, config);
+    ConnectionServer.addSocket(socket, config);
 
 
     const params = socket.handshake.query;
