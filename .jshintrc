@@ -10,9 +10,6 @@
   "undef": true,
   "unused": "strict",
   "globals": {
-    "RTCMultiConnection": true,
-    "RMCDefaultChannel": true,
-    "selfNPObject": true,
     "MediaStream": true,
     "AudioContext": true,
     "onPluginRTCInitialized": true
