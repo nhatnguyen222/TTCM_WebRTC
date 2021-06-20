@@ -7,20 +7,19 @@ Mã sinh viên : 5951071069
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-Nodejs
-Socket.io
-WebRTC
+- Nodejs
+- Socket.io
+- WebRTC
 ## Phần 2: Các chức năng đã hoàn thành:
- Xem danh sách các phòng : Hiển thị các phòng đang được mở 
-Tạo Phòng : Tạo bằng cách nhập mã phòng, và tên giáo viên mở lớp
-Có thể cài đặt mật khẩu
-Có phòng bí mật(Không hiển thị phòng ở danh sách)
-Vào Phòng : Vào phòng theo 2 phương pháp 
-Vào bằng cách nhấn vào danh sách phòng hoặc nhập tên phòng
+- Xem danh sách các phòng : Hiển thị các phòng đang được mở 
+- Tạo Phòng : Tạo bằng cách nhập mã phòng, và tên giáo viên mở lớp
+- Có thể cài đặt mật khẩu
+- Có phòng bí mật(Không hiển thị phòng ở danh sách)
+- Vào Phòng : Vào phòng theo 2 phương phápnhấn vào danh sách phòng hoặc nhập tên phòng
 - Trang phonghoc.html : 
-Có chức năng gọi video(phía tay phải)
-Chat và hiển thị người tham gia phía tay trái đồng thời có chức năng gửi file
-Có 1 bảng canva nhằm mục đích hỗ trợ dạy học
++ Có chức năng gọi video(phía tay phải)
++ Chat và hiển thị người tham gia phía tay trái đồng thời có chức năng gửi file
++ Có 1 bảng canva nhằm mục đích hỗ trợ dạy học
 ## Phần 3: Hạn chế
 1. Một số trường hợp không thể kết nối với nhau : 
 - Máy tính fake IP bị ẩn ip gốc của máy vì thế khi vượt qua NAT sẽ không đến địa chỉ gốc của máy tính được. Trường hợp này thì không thể nào khắc phục.
