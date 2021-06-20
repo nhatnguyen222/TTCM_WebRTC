@@ -1,6 +1,6 @@
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2020-2021
-Họ và tên: Nguyễn Hoàng Nhật
-Mã sinh viên : 5951071069     
+- Họ và tên: Nguyễn Hoàng Nhật
+- Mã sinh viên : 5951071069     
 * Lớp: Công nghệ thông tin-K59
 
 ## Đề tài: 
@@ -29,12 +29,12 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 - Máy tính ở nước ngoài(cụ thể DNS không phải của Google 8.8.8.8,8.8.8.4) vì Stun server và Turn server đang sài hàng mượn của Google. Nếu người dùng ở nước ngoài có thể tự thay đổi DNS trong máy tính hoặc mình tự tạo stun server riêng bản thân thì sẽ kết nối thành công. Ưu tiên việc tự thay đổi DNS vì tự tạo stun server tốn rất nhiều chi phí, mặc dù nó dễ làm. Trong báo cáo sẽ hướng dẫn tạo 1 Stun server riêng cho bản thân.
 - Người dùng sử dụng các trình duyệt không hỗ trợ getmediastream vì thế không thể lấy Video. Vì thế nên dùng Safari hoặc Chrome.
 ## Hướng dẫn sử dụng:
-Link web : https://hoconlineutc2.herokuapp.com/
-Video hướng dẫn sử dụng : https://www.youtube.com/watch?v=NUcuA4emHKY
+- Link web : https://hoconlineutc2.herokuapp.com/
+- Video hướng dẫn sử dụng : https://www.youtube.com/watch?v=NUcuA4emHKY
 ## So sánh bản demo : 
-Link web demo cũ sử dụng asp.net : https://chatutc2asp.azurewebsites.net/ 
-Web cũ chưa thực sự vượt mặt NAT( chỉ vượt qua Nat Traversal) nên chỉ hoạt động khi các peer cùng chung 1 Wifi.Còn web mới thì đã hoàn thành rất tốt, trừ 1 số trường hợp kể trên
-Web cũ chỉ gọi P2P 2 người với nhau, web mới sử dụng mảng danh sách các Peer để kết nối Mesh với nhau nên gọi theo dạng nhiều người dùng.
+- Link web demo cũ sử dụng asp.net : https://chatutc2asp.azurewebsites.net/ 
+- Web cũ chưa thực sự vượt mặt NAT( chỉ vượt qua Nat Traversal) nên chỉ hoạt động khi các peer cùng chung 1 Wifi.Còn web mới thì đã hoàn thành rất tốt, trừ 1 số trường hợp kể trên
+- Web cũ chỉ gọi P2P 2 người với nhau, web mới sử dụng mảng danh sách các Peer để kết nối Mesh với nhau nên gọi theo dạng nhiều người dùng.
 
 
 Xin cám ơn!
