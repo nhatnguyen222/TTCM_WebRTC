@@ -20,13 +20,14 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 + Có chức năng gọi video(phía tay phải)
 + Chat và hiển thị người tham gia phía tay trái đồng thời có chức năng gửi file
 + Có 1 bảng canva nhằm mục đích hỗ trợ dạy học
-## Phần 3: Hạn chế
-1. Một số trường hợp không thể kết nối với nhau : 
+## Phần 3 : Các Chức Năng Chưa Hoàn Thành
+- Chia sẻ màn hình vào canva
+- Tạo tài khoản cho sinh viên hoặc giáo viên
+- Cơ chế cài đặt mật khẩu chưa thật sự là hoàn hảo.
+## Phần 4 :  Một số trường hợp không thể kết nối với nhau : 
 - Máy tính fake IP bị ẩn ip gốc của máy vì thế khi vượt qua NAT sẽ không đến địa chỉ gốc của máy tính được. Trường hợp này thì không thể nào khắc phục.
 - Máy tính ở nước ngoài(cụ thể DNS không phải của Google 8.8.8.8,8.8.8.4) vì Stun server và Turn server đang sài hàng mượn của Google. Nếu người dùng ở nước ngoài có thể tự thay đổi DNS trong máy tính hoặc mình tự tạo stun server riêng bản thân thì sẽ kết nối thành công. Ưu tiên việc tự thay đổi DNS vì tự tạo stun server tốn rất nhiều chi phí, mặc dù nó dễ làm. Trong báo cáo sẽ hướng dẫn tạo 1 Stun server riêng cho bản thân.
 - Người dùng sử dụng các trình duyệt không hỗ trợ getmediastream vì thế không thể lấy Video. Vì thế nên dùng Safari hoặc Chrome.
-2. Web còn hạn chế về mặt giao diện : giao diện chưa được bắt mắt, bố cục không cân đối 
-3. Chức năng chia sẻ màn hình để vẽ ở canva đã bị loại bỏ vì hạn chế về kích thước không được cân đối.
 ## Hướng dẫn sử dụng:
 Link web : https://hoconlineutc2.herokuapp.com/
 Video hướng dẫn sử dụng : https://www.youtube.com/watch?v=NUcuA4emHKY
